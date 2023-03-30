@@ -35,7 +35,7 @@ const alunos = require('./json/alunos.js');
 // Cria um objeto com características express
 const app = express();
 
-app.use((request, response, next)=>{
+app.use((request, response, next) => {
 
     //Defininindo nossa API como uso público
     response.header('Access-Control-Allow-Origin', '*');
@@ -51,104 +51,83 @@ app.use((request, response, next)=>{
 
 // EndPoints
 
-app.get('/v1/lion-school/cursos', cors(), async function(request, response, next){
+app.get('/v1/lion-school/cursos', cors(), async function (request, response, next) {
 
     let cursos = listaCursos.getListaCursos();
 
     // Tratamento de validação de requisição
-    if(cursos)
-    {
+    if (cursos) {
         response.status(200)
         response.json(cursos)
-    }else{
+    } else {
         response.status(500);
     }
 })
 
-app.get('/v1/lion-school/alunos', cors(), async function(request, response, next){
-    let alunos = listaAlunos.getListaAlunos();
+app.get('/v1/lion-school/alunos', cors(), async function (request, response, next) {
+    let statusCode;
+
+    let aluno;
+    let dadosAluno = {}
+
+    let siglaCurso = request.query.sigla;
+    let statusAluno = request.query.status;
+
+    if (siglaCurso != undefined) {
+        if (siglaCurso == '' || siglaCurso == undefined || !isNaN(siglaCurso)) {
+            statusCode = 400;
+            dadosSiglaCurso.messsage = 'Sigla do curso inválida! Verifique se a mesma está correta.'
+        } else {
+            aluno = listaAlunos.getAlunosCurso(siglaCurso)
+        }
+
+    } else if (statusAluno != undefined) {
+        if (statusAluno == '' || statusAluno == undefined || !isNaN(statusAluno)) {
+            statusCode = 400;
+            dadosStatusAluno.messsage = 'Status do aluno inválido, verifique se o mesmo está correto.'
+
+        } else {
+            aluno = listaAlunos.getStatusAluno(statusAluno)
+        }
+    } else{
+        aluno = listaAlunos.getListaAlunos()
+    }
 
     // Tratamento de validação de requisição
-    if(alunos)
-    {
-        response.status(200)
-        response.json(alunos)
-    }else{
-        response.status(500)
+    if (alunos) {
+        statusCode = 200
+        dadosAluno = aluno
+    } else {
+        statusCode = 500
     }
+    response.json(dadosAluno)
+    response.status(statusCode)
 })
-app.get('/v1/lion-school/alunos/:matricula', cors(), async function(request, response, next){
+app.get('/v1/lion-school/alunos/:matricula', cors(), async function (request, response, next) {
 
     let statusCode;
     let dadosMatricula = {};
 
     let alunoMatricula = request.params.matricula;
 
-    if(alunoMatricula == '' || alunoMatricula == undefined || isNaN(alunoMatricula)){
+    if (alunoMatricula == '' || alunoMatricula == undefined || isNaN(alunoMatricula)) {
         statusCode = 400;
         dadosMatricula.messsage = 'Número de matrícula inválido, verifique se o mesmo está correto.'
-    } else{
+    } else {
         let aluno = listaAlunos.getAlunoMatricula(alunoMatricula)
 
-        if(aluno){
+        if (aluno) {
             statusCode = 200;
             dadosMatricula = aluno;
-        }else{
+        } else {
             statusCode = 404;
         }
     }
     response.status(statusCode)
     response.json(dadosMatricula)
 })
-app.get('/v1/lion-school/aluno', cors(), async function(request, response, next){
-   
-    let statusCode;
-    let dadosSiglaCurso = {}
 
-    let siglaCurso = request.query.sigla;
-
-    if(siglaCurso == '' || siglaCurso == undefined ||  !isNaN(siglaCurso)){
-        statusCode = 400;
-        dadosSiglaCurso.messsage = 'Sigla do curso inválida! Verifique se a mesma está correta.'
-    }else{
-        let aluno = listaAlunos.getAlunosCurso(siglaCurso)
-
-        if(aluno){
-            statusCode = 200;
-            dadosSiglaCurso = aluno;
-        }else{
-            statusCode = 404
-        }
-    }
-    response.status(statusCode)
-    response.json(dadosSiglaCurso)
-
-})
-app.get('/v1/lion-school/aluno/info', cors(), async function(request, response, next){
-
-    let statusCode;
-    let dadosStatusAluno = {}
-
-    let statusAluno = request.query.status;
-
-    if(statusAluno == '' || statusAluno == undefined || !isNaN(statusAluno)){
-        statusCode = 400;
-        dadosStatusAluno.messsage = 'Status do aluno inválido, verifique se o mesmo está correto.'
-
-    } else{
-        let aluno = listaAlunos.getStatusAluno(statusAluno)
-
-        if(aluno){
-            statusCode = 200;
-            dadosStatusAluno = aluno;
-        } else{
-            statusCode = 404;
-        }
-    }
-    response.status(statusCode)
-    response.json(dadosStatusAluno)
-})
 //Rodar o serviço da API para aguardar requisições
-app.listen(8080, function(){
+app.listen(8080, function () {
     console.log('Servidor aguardando requisições na porta 8080')
 })
