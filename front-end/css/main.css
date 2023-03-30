@@ -1,0 +1,12 @@
+main{
+    width: 100vw;
+    height: 75vh;
+    background-color: red;
+    display: flex;
+}
+.cursos{
+    
+}
+p{
+    align-items: center;
+}
