@@ -1,0 +1,12 @@
+nav{
+    background:#BCC2E5;
+    height: 5vh;
+    width: 99vw;
+    
+}
+.status{
+    align-items: flex-start;
+    justify-content: right;
+    display: flex;
+    flex-direction: row;
+}
