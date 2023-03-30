@@ -1,12 +1,90 @@
-main{
-    width: 100vw;
-    height: 75vh;
-    background-color: red;
-    display: flex;
-}
-.cursos{
-    
-}
-p{
+main {
+    display: grid;
     align-items: center;
+    width: 100%;
+    height: 75vh;
+    grid-template-areas: 
+    "devices studant container-cursos";
+    grid-template-columns: 
+    40vw 20vw 40vw;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: lawngreen;
+}
+.devices {
+    display: flex;
+    justify-content: center;
+    grid-area: devices;
+}
+
+.text-escolha {
+    padding-left: 8vw;
+    font-size: 8vh;
+    font-weight: 300;
+    grid-area: devices;
+}
+
+.text-curso {
+    font-weight: 500;
+    color: #3347B0;
+    font-weight: bold;
+}
+
+.text-gerenciar {
+    padding-left: 8vw;
+    padding-bottom: 10vh;
+    font-size: 8vh;
+    font-weight: 300;
+    grid-area: devices;
+}
+
+.studant {
+    display: grid;
+    justify-content: center;
+    grid-area: studant;
+}
+
+.container {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+
+.container-cursos {
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+    height: 20vh;
+    margin: 16px;
+    background: #3347B0;
+    box-shadow: 10px 10px #99A3D7;
+    transition: .5s;
+    grid-template-columns: 
+    50% 50%;
+    cursor: pointer;
+    grid-area: container-cursos;
+}
+
+.container-cursos:hover {
+    width: 22vw;
+    height: 22vh;
+}
+
+.image-curso {
+    width: 5vw;
+    height: 8vh;
+    display: flex;
+    align-self: center;
+    margin-right: 1vw;
+    color: #ffffff;
+}
+
+.sigla-curso {
+    display: grid;
+    align-content: center;
+    font-size: 8vh;
+    color: #ffffff;
 }
