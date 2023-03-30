@@ -1,5 +1,72 @@
 footer{
     height: 15vh;
     width: 100vw;
-    background: greenyellow;
+    background: #3347B0;
+
+    /* flex-direction: column; */
+    
+}
+.contatos{
+    display: grid;
+    grid-template-areas:  
+    "contato copyright icons";
+    grid-template-columns: 1fr 2fr 2fr ;
+    width: 99%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+.contato{
+    width: 30vw;
+    grid-area: contato;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    
+}
+.contato li{
+    list-style: none;
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
+    gap:2%;
+}
+.copyright{
+    grid-area:copyright;
+    text-align: center;
+    padding: 9%;
+}
+.icons{
+    text-align: center;
+    padding: 6%;
+}
+.icons:hover{
+    color: grey;
+}
+.icons li{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    justify-content: center;
+    grid-area: icons;
+    
+}
+.icons ul{
+    display: flex;
+    flex-direction: row;
+    width: 20vw;
+    font-size: 1.5rem;
+    justify-content: center;
+    gap: 15%;
+
+}
+.fa-brands{
+    height: 25px;
+    width: 25px;
 }
