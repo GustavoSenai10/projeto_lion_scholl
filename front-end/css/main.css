@@ -1,30 +1,28 @@
 main {
-    display: grid;
-    align-items: center;
     width: 100%;
     height: 75vh;
+    display: grid;
     grid-template-areas: 
     "devices studant container-cursos";
     grid-template-columns: 
     40vw 20vw 40vw;
 }
-::-webkit-scrollbar{
+
+/* ::-webkit-scrollbar{
     width: 10px;
 }
 ::-webkit-scrollbar-thumb{
-    background: lawngreen;
-}
-.devices {
-    display: flex;
-    justify-content: center;
-    grid-area: devices;
-}
 
+} */
+.info-container{
+    grid-area: devices;
+    margin-top: 5vh;
+}
 .text-escolha {
-    padding-left: 8vw;
+    padding-left: 4vw;
     font-size: 8vh;
     font-weight: 300;
-    grid-area: devices;
+    width: 45vw;
 }
 
 .text-curso {
@@ -34,51 +32,27 @@ main {
 }
 
 .text-gerenciar {
-    padding-left: 8vw;
+    padding-left: 4vw;
     padding-bottom: 10vh;
     font-size: 8vh;
     font-weight: 300;
-    grid-area: devices;
+
 }
 
 .studant {
-    display: grid;
-    justify-content: center;
+    width: 15vw;
+    align-self: center;
     grid-area: studant;
 }
-
-.container {
-    display: flex;
-    justify-self: center;
-    flex-direction: column;
+.devices{
+    padding-left: 5vw;
+    width: 35vw;
 }
-
-.container-cursos {
-    display: flex;
-    justify-content: center;
-    width: 20vw;
-    height: 20vh;
-    margin: 16px;
-    background: #3347B0;
-    box-shadow: 10px 10px #99A3D7;
-    transition: .5s;
-    grid-template-columns: 
-    50% 50%;
-    cursor: pointer;
-    grid-area: container-cursos;
-}
-
-.container-cursos:hover {
-    width: 22vw;
-    height: 22vh;
-}
-
 .image-curso {
     width: 5vw;
     height: 8vh;
     display: flex;
     align-self: center;
-    margin-right: 1vw;
     color: #ffffff;
 }
 
@@ -87,4 +61,45 @@ main {
     align-content: center;
     font-size: 8vh;
     color: #ffffff;
+}
+.container-class{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    grid-area: container-cursos;
+    width: 20vw;
+    gap: 20px
+    ;
+}
+.img-card{
+    width: 5vw;
+    height: 8vh;
+    align-self: center;
+    margin-left: 4vw;
+}
+.card{
+    background-color: #3347B0;
+    width: 20vw;
+    height: 23vh;
+    display: flex;
+    border: 1px solid #000000;
+    box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: .7s;
+}
+.conteudo-card{
+    color: #ffffff;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-self: center;
+    margin-left: 1vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    gap: 20px;
 }
