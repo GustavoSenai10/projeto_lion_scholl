@@ -5,7 +5,7 @@ main {
     grid-template-areas: 
     "devices studant container-cursos";
     grid-template-columns: 
-    40vw 20vw 40vw;
+    45vw 20vw 35vw;
 }
 
 /* ::-webkit-scrollbar{
@@ -85,6 +85,7 @@ main {
     display: flex;
     border: 1px solid #000000;
     box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
+    margin-left: -4vw;
 }
 .card:hover{
     transform: scale(1.1);
