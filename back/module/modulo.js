@@ -67,7 +67,7 @@ const alunos = require('../json/alunos.js');
     let informacoes = []
 
     listaAlunos.alunos.forEach(function(lista){
-       if(siglaCurso == lista.curso[0].sigla){
+       if(siglaCurso.toUpperCase() == lista.curso[0].sigla.toUpperCase()){
 
          listaDadosAlunoJSON = {}
 
@@ -86,7 +86,7 @@ const alunos = require('../json/alunos.js');
     return alunos
 
  }
-
+console.log(getAlunosCurso('DS'))
  const getStatusAluno = function(status){
 
    listaDadosAlunoJSON = false;
@@ -115,7 +115,7 @@ const alunos = require('../json/alunos.js');
    }
    return alunos
  }
-console.log(getStatusAluno('CURSANDO'))
+
  module.exports = {
     getListaCursos,
     getListaAlunos,
