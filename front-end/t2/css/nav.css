@@ -11,7 +11,7 @@
 }
 .status{
     display: flex;
-    
+    cursor: pointer;
         
 }
 .filtro{
