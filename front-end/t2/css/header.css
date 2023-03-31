@@ -1,0 +1,53 @@
+header{
+    grid-area: header;
+    width: 100vw;
+    height: 10vh;
+    background-color: #3347B0;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 50vw 50vw;
+}
+.brazao{
+    width: 30vw;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: row;
+    grid-area: left;
+    color:aliceblue;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+}
+.img-logo{
+    width: 2.3vw;
+    height: 6vh;
+}
+.nome{
+    grid-area: left;
+    margin-top: .5vh;
+    margin-left: .5vw;
+}
+.button-leave{
+    grid-area: right;
+    width: 5vw;
+    color:aliceblue;
+    display: flex;
+    justify-self: flex-end;
+    align-self: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-right: 2vw;
+    cursor: pointer;
+    gap: 4px;
+    font-size: 1.5rem;
+}
+
+.button-leave:hover{
+    color: #f0bc54;
+    transform: scale(1.1);
+    transition: .5s;
+}
+.nav-bar{
+    
+}

@@ -1,6 +1,8 @@
 'use strict'
 
-import { cursos } from "../js/cursos.js"
+import { cursos } from "./cursos.js"
+
+import {getAlunos } from "./api.js"
 
 const criarCard = function(cursos){
 
@@ -16,6 +18,12 @@ const criarCard = function(cursos){
     sigla.textContent = cursos.sigla
 
     card.append(foto, sigla)
+
+    card.addEventListener('click', () => {
+        localStorage.setItem('curso', cursos.sigla)
+    })
+
+    
   
     return card
 }
@@ -27,4 +35,12 @@ const carregarCard = () => {
     container.replaceChildren(...cards)
 
 }
+
+const alunosDs = () => {
+    const novaJanela = document.getElementById('container-card')
+    novaJanela.onclick = function () {
+        window.location.href = "./t2/index.html"
+    }
+}
 carregarCard()
+alunosDs()
