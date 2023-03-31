@@ -28,9 +28,9 @@ const bodyParser = require('body-parser');
 
 const { request, response } = require('express');
 
-const listaCursos = require('./module/modulo.js')
-const listaAlunos = require('./module/modulo.js');
-const alunos = require('./json/alunos.js');
+const listaCursos = require('./back/module/modulo.js')
+const listaAlunos = require('./back/module/modulo.js');
+const alunos = require('./back/json/alunos.js');
 
 // Cria um objeto com características express
 const app = express();
