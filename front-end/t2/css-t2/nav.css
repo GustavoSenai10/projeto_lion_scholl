@@ -1,12 +1,54 @@
-nav{
-    background:#BCC2E5;
-    height: 5vh;
-    width: 99vw;
-    
+.nav_bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+    height: 2vh;
+    background: #BCC2E5;
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    font-size: 16px;
+   
 }
 .status{
-    align-items: flex-start;
-    justify-content: right;
+    display: flex;
+    
+        
+}
+.filtro{
+    color: #3347B0;
+    justify-content: center;
+    
+}
+.nav_li{
+    display: flex;
+    align-items: center;
+    
+}
+.nav_li ul{
+    list-style: none;
     display: flex;
     flex-direction: row;
+    gap: 16px;
+    margin-bottom: 1rem;
 }
+.nav_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    gap: 12%;
+}
+.Cursando{
+    height: 2vh;
+    width: 2vw;
+    background-color: #3347B0;
+    box-shadow: 3% 3% solid black;
+}
+.finalizado{
+    height: 2vh;
+    width: 2vw;
+    background-color: #E5B657;
+    box-shadow: 3% 3% solid black;
+}
+
