@@ -1,48 +1,66 @@
 'use strict'
 
 import { alunos } from "../t1/js/alunos.js"
+import { getAlunos } from "../t1/js/api.js"
 
+const nomeCurso = localStorage.getItem('nomeCurso')
 const curso = localStorage.getItem('curso')
 
-const listaAlunos = await alunos()(curso)
+const listaAlunos = await getAlunos(curso)
 
 const exit = () => {
     const buttonSair = document.querySelector('.button-leave')
     buttonSair.onclick = function (){
-        window.location.href = 'http://127.0.0.1:5500/front-end/t2/index.html'
+        window.location.href = '../t1/index.html'
     }
 }
 
 exit()
 
-const criarCards = (aluno) =>{
+const criarTituloCurso = () =>{
 
+    const divTitulo = document.querySelector('.tituloCurso')
+
+    const textTitulo = document.createElement('h1')
+    textTitulo.classList.add('nomeCurso')
+    textTitulo.textContent = nomeCurso
+
+    divTitulo.append(textTitulo)
+
+    return divTitulo
+
+}
+
+const criarCards = (aluno) =>{
+    
     const cardAluno = document.createElement('div')
+    cardAluno.classList.add('card')
+
+    const content = document.createElement('div')
+    content.classList.add('content')
 
     const imgAluno = document.createElement('img')
-    const nomeAluno = document.createElement('div')
-
-    if(aluno.status == 'Cursando'){
-        cardAluno.classList.add('card_cursando')
-    }else{
-        cardAluno.classList.add('card_finalizado')
-    }
-
-    imgAluno.src = `${aluno.foto}`
     imgAluno.classList.add('aluno-foto')
+    imgAluno.src = `${aluno.foto}`
 
+    const nomeAluno = document.createElement('div')
     nomeAluno.classList.add('nome-aluno')
     nomeAluno.textContent = aluno.nome
 
-    cardAluno.append(imgAluno, nomeAluno)
+    cardAluno.append(content)
+    content.append(imgAluno, nomeAluno)
 
     return cardAluno
 }
 
+
 const carregarCards = () => {
-    const containerCards = document.querySelector('.container-cards')
+    criarTituloCurso()
+    const containerCards = document.getElementById('container-cards')
     const alunos = listaAlunos.informacoes.map(criarCards)
-    containerCards.replaceChildren(...alunos)
+    containerCards.append(...alunos)
+
+    console.log(alunos)
 }
 
 carregarCards()

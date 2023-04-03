@@ -20,6 +20,7 @@ const criarCard = function(cursos){
     card.append(foto, sigla)
 
     card.addEventListener('click', () => {
+        localStorage.setItem('nomeCurso', cursos.nome)
         localStorage.setItem('curso', cursos.sigla)
     })
 
@@ -39,7 +40,7 @@ const carregarCard = () => {
 const alunosDs = () => {
     const novaJanela = document.getElementById('container-card')
     novaJanela.onclick = function () {
-        window.location.href = "./t2/index.html"
+        window.location.href = "../t2/index.html"
     }
 }
 carregarCard()

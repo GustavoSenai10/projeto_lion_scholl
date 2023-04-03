@@ -16,6 +16,7 @@ main {
 } */
 .info-container{
     grid-area: devices;
+    font-family: 'Roboto', sans-serif;
     margin-top: 5vh;
 }
 .text-escolha {
