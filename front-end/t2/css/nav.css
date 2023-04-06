@@ -8,13 +8,11 @@
     font-family: 'Roboto', sans-serif;
     font-weight:500;
     font-size: 16px;
-   
 }
 .filtro {
     position: relative;
     display: inline-block;
     padding-bottom: 1px;
-    
   }
   .status{
     color: #3347B0;
@@ -22,7 +20,6 @@
     background:#BCC2E5;
     font-weight: bold;
     font-size: 16px;
-    
     font-family:'Roboto', sans-serif;
   }
   a{

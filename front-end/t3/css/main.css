@@ -1,0 +1,168 @@
+main{
+    height:75vh ;
+    
+}
+.estudante{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    overflow: hidden;
+    padding: 2.6%;
+    
+
+}
+.aluno{
+    width: 300px;
+    height: 300px;
+}
+h3{
+    color: #3347B0;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+.card{
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    "img"
+    "text";
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    width: 500px;
+    height: 500px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.grafico{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    width: 500px;
+    height: 500px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.card_grafico{
+    display: flex;
+   flex-direction: row;
+   column-gap: 15px;
+   width: 100%;
+   padding: 20px;
+   justify-content: space-between;
+}
+.bloco1{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 1vw;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.cor_1{
+    background: #3347B0;
+    height: 2vh;
+    width: 0.6vw;
+  }
+.bloco2{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 1vw;
+    align-items: center;
+    justify-content: center;
+    height: auto;  
+  }
+  .cor_2{
+    justify-content: end;
+    height: 2vh;
+    width: 0.6vw;
+    background: #C11010;
+  }
+.bloco3{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 1vw;
+    align-items: center;
+    justify-content: center;
+    height: auto;  
+  }
+  .cor_3{
+    justify-content: end;
+    height: 2vh;
+    width: 0.6vw;
+    background: #E5B657;
+  }
+
+  .bloco4{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 1vw;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  .cor_4{
+    justify-content: end;
+    height: 2vh;
+    width: 0.6vw;
+    background: #3347B0;
+  }
+  .bloco5{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 1vw;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  .cor_5{
+    justify-content: end;
+    height: 2vh;
+    width: 0.6vw;
+    background: #3347B0;
+  }
+  .bloco6{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 1vw;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  .cor_6{
+    justify-content: end;
+    height: 2vh;
+    width: 0.6vw;
+    background: #3347B0;
+  }
+  span{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3347B0;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+.percentual{
+    height: 10vh;
+    background: #EEEFF8;
+}
