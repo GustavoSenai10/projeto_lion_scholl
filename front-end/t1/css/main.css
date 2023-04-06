@@ -78,6 +78,7 @@ main {
     height: 8vh;
     align-self: center;
     margin-left: 4vw;
+    filter: invert(100%);
 }
 .card{
     background-color: #3347B0;
