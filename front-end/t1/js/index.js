@@ -1,8 +1,9 @@
 'use strict'
 
-import { cursos } from "./cursos.js"
+// import { cursos } from "./cursos.js"
+import {getCursos} from "./api.js"
 
-import {getAlunos } from "./api.js"
+const cursos = await getCursos()
 
 const criarCard = function(cursos){
 
@@ -31,7 +32,7 @@ const criarCard = function(cursos){
 
 const carregarCard = () => {
     const container = document.getElementById('container-card')
-    const cards = cursos.map(criarCard)
+    const cards = cursos.cursos.map(criarCard)
 
     container.replaceChildren(...cards)
 

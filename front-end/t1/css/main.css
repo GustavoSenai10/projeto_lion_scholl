@@ -78,6 +78,7 @@ main {
     height: 8vh;
     align-self: center;
     margin-left: 4vw;
+    filter: invert(100%);
 }
 .card{
     background-color: #3347B0;
@@ -104,4 +105,32 @@ main {
     font-size: 60px;
     font-weight: 500;
     gap: 20px;
+}
+@media(max-width: 640px){
+    main{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .studant{
+        display: none;
+    }
+    .devices{
+        display: none;
+    }
+    .img-card{
+        width: 14vw;
+        margin-left: 6vw;
+    }
+    .card{
+        display: flex;
+        align-self: center;
+        height: 20vh;
+        width: 60vw;
+        margin-right: 5vw;
+    }
+    .conteudo-card{
+        font-size: 54px;
+        margin-left: 2vw;
+    }
 }
