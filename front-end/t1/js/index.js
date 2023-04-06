@@ -12,7 +12,7 @@ const criarCard = function(cursos){
 
     const foto = document.createElement('img')
     foto.classList.add('img-card')
-    foto.src = `./${cursos.icone}`
+    foto.src = `${cursos.icone}`
 
     const sigla = document.createElement('p')
     sigla.classList.add('conteudo-card')

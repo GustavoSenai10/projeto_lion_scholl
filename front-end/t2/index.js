@@ -11,7 +11,7 @@ const listaAlunos = await getAlunos(curso)
 const exit = () => {
     const buttonSair = document.querySelector('.button-leave')
     buttonSair.onclick = function (){
-        window.location.href = '../t1/index.html'
+        window.location.href = "../t1/index.html"
     }
 }
 
