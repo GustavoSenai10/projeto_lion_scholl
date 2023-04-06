@@ -46,3 +46,19 @@ header{
     transform: scale(1.1);
     transition: .5s;
 }
+
+@media(max-width: 640px){
+    .brazao{
+        width: 40vw;
+    }
+    .img-logo{
+        width: 8vw;
+    }
+    .nome{
+        padding-left: 5px;
+    }
+
+    .button-leave{
+        margin-right: 20vw;
+    }
+}
