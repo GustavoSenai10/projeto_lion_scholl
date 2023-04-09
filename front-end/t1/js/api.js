@@ -15,3 +15,11 @@ export const getCursos = async() => {
 
     return data
 }
+
+export const getAlunoStatus = async(statusAluno) => {
+    const url = `https://projeto-lion-school.cyclic.app/v1/lion-school/alunos?status=${statusAluno}`
+    const response = await fetch(url)
+    const data = await response.json()
+
+    return data
+}

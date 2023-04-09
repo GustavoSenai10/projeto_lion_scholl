@@ -3,6 +3,8 @@
 // import { cursos } from "./cursos.js"
 import {getCursos} from "./api.js"
 
+
+
 const cursos = await getCursos()
 
 const criarCard = function(cursos){
@@ -23,6 +25,7 @@ const criarCard = function(cursos){
     card.addEventListener('click', () => {
         localStorage.setItem('nomeCurso', cursos.nome)
         localStorage.setItem('curso', cursos.sigla)
+        window.location.href = "../t2/index.html"
     })
 
     
@@ -38,11 +41,11 @@ const carregarCard = () => {
 
 }
 
-const alunosDs = () => {
-    const novaJanela = document.getElementById('container-card')
-    novaJanela.onclick = function () {
-        window.location.href = "../t2/index.html"
-    }
-}
+// const alunosDs = () => {
+//     const novaJanela = document.getElementById('container-card')
+//     novaJanela.onclick = function () {
+        
+//     }
+// }
 carregarCard()
-alunosDs()
+// alunosDs()

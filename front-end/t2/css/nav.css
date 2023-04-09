@@ -14,7 +14,7 @@
     display: inline-block;
     padding-bottom: 1px;
   }
-  .status{
+  .button-status{
     color: #3347B0;
     border-style: none;
     background:#BCC2E5;
@@ -22,6 +22,21 @@
     font-size: 16px;
     font-family:'Roboto', sans-serif;
   }
+  .filtro__ano{
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.filtro__ano p {
+    color: #3347B0;
+}
+
+.filtro__ano input{
+    width: 96px;
+    border-color: #3347B0;
+    text-align: end;
+}
   a{
     text-decoration: none;
     color: white;

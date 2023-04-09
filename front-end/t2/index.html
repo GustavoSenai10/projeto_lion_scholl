@@ -35,16 +35,26 @@
         <nav class="nav_bar">
             <div class="drop">
                 <div class="filtro">
-                    <button class="status">Status</button>
+                    <button class="button-status">Status</button>
                     <div class="status-content">
-                        <a id="todos" href="#">Status</a>
-                        <a id="finalizado" href="#">Finalizado</a>
-                        <a id="cursando" href="#">Cursando</a>
+                        <button class="button-status" id="status">
+                            <a href="#">Status</a>
+                        </button>
+
+                        <button class="button-status" id="finalizado">
+                            <a href="#">Finalizado</a>
+                        </button> 
+
+                        <button class="button-status" id="cursando">
+                            <a href="#">Cursando</a>
+                        </button>
+                       
                     </div>
                 </div>
             </div>
-            <div class="ano">
-                
+            <div class="filtro__ano">
+                <p>Ano de Conclusão:</p>
+                <input type="number" id="input-ano">
             </div>
             <div class="nav_li">
                 <ul>
