@@ -20,7 +20,7 @@ const exit = () => {
 exit()
 
 // verifiaçao de status aluno
-const verificacaoALuno = (array) =>{
+const verificacaoAluno = (array) =>{
     let listaAlunos = array
     let arrayAlunos = []
 
@@ -133,14 +133,14 @@ const filtrarAnoComStatus = (listaArray) =>{
     let lista = listaArray
     const containerCards = document.querySelector('.container-cards')
     const inputYear = document.getElementById('input-ano')
-    let jsonAlunos = verificacaoALuno(lista)
+    let jsonAlunos = verificacaoAluno(lista)
     let alunos = jsonAlunos.arrayAlunos.map(criarCards)
     containerCards.replaceChildren(...alunos)
     inputYear.addEventListener('keydown', (e) =>{
         if(e.key == "Enter"){
             const ano = inputYear.value
             const arrayAlunos = alunosAno(lista, ano)
-            jsonAlunos = verificacaoALuno(arrayAlunos.listaAlunos)
+            jsonAlunos = verificacaoAluno(arrayAlunos.listaAlunos)
             alunos = jsonAlunos.arrayAlunos.map(criarCards)
             containerCards.replaceChildren(...alunos)
         }

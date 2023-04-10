@@ -89,4 +89,22 @@
     background-color: #E5B657;
     box-shadow: 3% 3% solid black;
 }
-
+@media(max-width: 640px){
+  .nav_bar{
+    width: 100vw;
+    height: 8vh;
+    justify-content: center;
+    padding: 0;
+    
+  }
+  .filtro{
+    margin-right: 7vw;
+    padding-bottom: 0;
+  }
+  .nav_li{
+    font-size: 14px;
+  }
+  .filtro__ano{
+    display: none;
+  }
+}

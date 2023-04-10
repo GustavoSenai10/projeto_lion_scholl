@@ -90,3 +90,31 @@ footer{
     height: 25px;
     width: 25px;
 }
+
+@media(max-width: 640px){
+    footer{
+        height: 45vh;
+        width: 100vw;
+    }
+    .contatos{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        width: 90%;
+    }
+    .ul-contato{
+        margin-top: 7vh;
+        margin-left: 19vw;
+    }
+    .copyright{
+        margin-top: 9vh;
+        width: 85vw;
+    }
+    .contato-address{
+       width: 300px;
+    }
+    .icons li{
+        margin-top: 5vh;
+    }
+}
