@@ -25,7 +25,7 @@ const criarCard = function(curso){
     card.addEventListener('click', () => {
         localStorage.setItem('nomeCurso', curso.nome)
         localStorage.setItem('curso', curso.sigla)
-        window.location.href = "../t2/index.html"
+        window.location.href = "../curso.html"
     })
 
     

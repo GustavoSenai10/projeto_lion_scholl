@@ -13,7 +13,7 @@ const listaALunosCursando = await getAlunoStatus('Cursando')
 const exit = () => {
     const buttonSair = document.querySelector('.button-leave')
     buttonSair.onclick = function (){
-        window.location.href = "../t1/index.html"
+        window.location.href = "../home.html"
     }
 }
 
@@ -22,10 +22,11 @@ exit()
 // verifiaçao de status aluno
 const verificacaoAluno = (array) =>{
     let listaAlunos = array
-    let arrayAlunos = []
+    let arrayAlunos = []    
 
     listaAlunos.forEach((aluno) => {
         let jsonAluno = {}
+        
         if (aluno.curso == nomeCurso){
             jsonAluno = {
                 nome: aluno.nome,
@@ -98,6 +99,7 @@ const criarCards = (aluno) =>{
 
 const carregarCards = () => {
     criarTituloCurso()
+    
     const containerCards = document.querySelector('.container-cards')
 
     const status = document.getElementById('status')
@@ -110,6 +112,7 @@ const carregarCards = () => {
     const inputYear = document.getElementById('input-ano')
     inputYear.addEventListener('keydown', (e) =>{
         if(e.key == "Enter"){
+            console.log(listaAlunos)
             const ano = inputYear.value
             let jsonAlunos = alunosAno(listaAlunos.informacoes, ano)
             alunos = jsonAlunos.listaAlunos.map(criarCards)
