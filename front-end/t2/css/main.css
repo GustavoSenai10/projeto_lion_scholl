@@ -94,12 +94,13 @@ p{
     main{
         height: 150vh;
         padding-left: 17vw;
+        gap: 20px;
     }
     .container-cards{
         display: flex;
         flex-direction: column;
-        gap: 10px
-        ;
+        justify-content: space-between;
+        gap: 10px;
     }
     .tituloCurso{
         font-size: 10px;

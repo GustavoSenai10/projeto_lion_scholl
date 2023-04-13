@@ -49,6 +49,9 @@ header{
     transition: .5s;
 }
 @media(max-width: 640px){
+    header{
+        height: 20vh;
+    }
     .brazao{
         width: 40vw;
     }

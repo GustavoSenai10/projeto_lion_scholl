@@ -14,6 +14,7 @@ const criarCard = function(curso){
 
     const foto = document.createElement('img')
     foto.classList.add('img-card')
+    foto.alt = 'imagens dos cursos'
     foto.src = `${curso.icone}`
 
     const sigla = document.createElement('p')

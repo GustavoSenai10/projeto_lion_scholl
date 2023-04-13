@@ -92,6 +92,7 @@ footer{
 }
 @media(max-width: 640px){
     footer{
+        padding-top: 5vh;
         height: 45vh;
         width: 100vw;
     }
@@ -102,16 +103,28 @@ footer{
         justify-self: center;
         width: 90%;
     }
+    .contato{
+        width: 60vw;
+        height: 10vh;
+    }
+    .contato-number{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
     .ul-contato{
         margin-top: 7vh;
-        margin-left: 19vw;
+        margin-left: 5vw;
+        flex-direction: column;
+        width: 100svw;
     }
+
     .copyright{
-        margin-top: 9vh;
+        margin-top: 12vh;
         width: 85vw;
     }
     .contato-address{
-       width: 300px;
+       width: 500px;
     }
     .icons li{
         margin-top: 5vh;
