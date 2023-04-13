@@ -1,37 +1,32 @@
-'user strict'
+'use strict'; 
 
-import {getAlunoStatus} from "../t1/js/api.js"
-import{getAlunos} from "../t1/js/api.js"
-import {getTeste} from "./teste.js"
-
-console.log(getTeste)
+import { getAlunoStatus, getAlunos } from "../t1/js/api.js"; // Corrigido o nome do método importado
+import { alunos } from "./teste.js"; // Corrigido o nome do objeto importado
 
 const criarCard = (aluno) => {
-  
-  const card = document.createElement('div')
-  card.classList.add("card")
+  const card = document.createElement('div');
+  card.classList.add("card");
 
-  const foto = document.createElement('img')
-  foto.classList.add('aluno')
-  foto.src = `${aluno.image}`
+  const foto = document.createElement('img');
+  foto.classList.add('aluno');
+  foto.src = `${aluno.foto}`;
 
-  const nomeAluno = document.createElement('span')
-  nomeAluno.classList.add('nome_aluno')
-  nomeAluno.textContent = aluno.alunos
-  
-  card.append(foto,nomeAluno)
-  return card
+  const nomeAluno = document.createElement('span');
+  nomeAluno.classList.add('nome_aluno');
+  nomeAluno.textContent = aluno.nome;
 
-  
+  card.append(foto, nomeAluno);
+  return card;
+};
 
-} 
-const carregarAluno = (aluno) =>{
-  const cardAluno = document.getElementById('estudante')
-   const componentesCard = getTeste.alunos.map(criarCard)
-  
-   cardAluno.replaceChild(componentesCard)
-}
+const carregarAluno = (aluno) => {
+  const cardAluno = document.getElementById('estudante');
+  const componentesCard = alunos.map(criarCard); // Corrigido o uso de "alunos.alunos.map"
 
-console.log(carregarAluno)
-carregarAluno()
+  componentesCard.forEach(componente => {
+    cardAluno.appendChild(componente); // Adiciona cada componente do card ao elemento "cardAluno"
+  });
+};
+
+carregarAluno();
 
