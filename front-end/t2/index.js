@@ -13,7 +13,7 @@ const listaALunosCursando = await getAlunoStatus('Cursando')
 const exit = () => {
     const buttonSair = document.querySelector('.button-leave')
     buttonSair.onclick = function (){
-        window.location.href = "../home.html"
+        window.location.href = "../index.html"
     }
 }
 
