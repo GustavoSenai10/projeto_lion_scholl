@@ -5,6 +5,9 @@ import { getAlunos, getAlunoStatus } from "../t1/js/api.js"
 const nomeCurso = localStorage.getItem('nomeCurso')
 const curso = localStorage.getItem('curso')
 
+console.log(nomeCurso, curso);
+
+
 const listaAlunos = await getAlunos(curso)
 const listaALunosFinalizado = await getAlunoStatus('Finalizado')
 const listaALunosCursando = await getAlunoStatus('Cursando')
@@ -65,7 +68,7 @@ const criarCards = (aluno) =>{
     if(aluno.status == 'Cursando'){
         cardAluno.classList.add('card_cursando')
         console.log(cardAluno)
-    }else{
+    }else if(aluno.status == 'Finalizado'){
         cardAluno.classList.add('card_finalizado')
         console.log(cardAluno)
     }
