@@ -1,6 +1,7 @@
 main{
     height:75vh;
     
+    
 }
 .estudante{
     position:relative;
@@ -97,7 +98,7 @@ h3{
 }
 .estudante{
  display: flex;
- flex-direction: column;
+ flex-direction: column-reverse;
 }
 .aluno{
   height: 15vh;
