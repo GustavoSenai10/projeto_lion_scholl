@@ -88,9 +88,17 @@ const criarCards = (aluno) =>{
 
     nomeAluno.classList.add('nome-aluno')
     nomeAluno.textContent = aluno.nome
+     
+    cardAluno.addEventListener('click', async()=>{
+        localStorage.setItem('matricula', aluno.matricula )
 
-    cardAluno.append(content)
+        window.location.href = "http://127.0.0.1:5500/alunos.html"
+    })
+
+
+   cardAluno.append(content)
     content.append(imgAluno, nomeAluno)
+
 
     
     return cardAluno
